@@ -3,9 +3,9 @@
         "name": "xajayanthi/composer-wp-dev-kit",
         "version": "1.0.0",
         "source": {
-          "url": "git@github.com:xajayanthi/composer-wp-dev-kit.git",
+          "url": "git@github.com:xajayanthi/xearts_composer-wp-dev-kit.git",
           "type": "git",
-          "reference": "jayanthi/wp-dev-kit-env-setup"
+          "reference": "master"
 
         }
     }
