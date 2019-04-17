@@ -1,0 +1,48 @@
+local:
+  vhost: "http://127.0.0.1:8080"
+  wordpress_path: "./wp"
+
+  paths: # you can customize wordpress internal paths
+    wp_content: "../wp-content"
+    mu_plugins: "../wp-content/mu-plugins"
+    uploads: "../wp-content/uploads"
+    plugins: "../wp-content/plugins"
+    themes: "../wp-content/themes"
+    languages: "../wp-content/languages"
+    themes: "../wp-content/themes"
+
+  database:
+    name: "composer_wp_dev"
+    user: "root"
+    password: ""
+    host: "localhost"
+
+staging:
+  vhost: "http://example.com"
+  wordpress_path: "/var/www/vhosts/example.com" # use an absolute path here
+
+  database:
+    name: "dbname"
+    user: "dbuser"
+    password: "dbpass"
+    host: "localhost"
+    charset: "utf8"
+
+  exclude:
+    - "autoload.php"
+    - ".git/"
+    - ".gitignore"
+    - ".sass-cache/"
+    - "node_modules/"
+    - "bin/"
+    - "tmp/*"
+    - "Gemfile*"
+    - "Movefile"
+    - "config.php"
+    - "wp-content/*.sql"
+
+  ssh:
+    host: "example.com"
+    user: "user"
+    port: 22 # Port is optional
+    rsync_options: "--verbose"

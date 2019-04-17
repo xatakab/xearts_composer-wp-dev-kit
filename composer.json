@@ -1,0 +1,50 @@
+{
+    "name": "xajayanthi/composer-wp-dev-kit",
+    "repositories": [    
+        {
+            "type": "composer",
+            "url": "https://wpackagist.org"
+        },   
+        {
+            "type": "vcs",
+            "url": "https://github.com/xajayanthi/composer-wp-dev-kit"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.2",
+        "johnpbloch/wordpress": "^4.7",
+        "wpackagist-plugin/built-in-server-helper": "^1.0",
+        "wp-cli/wp-cli": "^1.3"
+    },
+    "config": {
+        "process-timeout": 0
+    },
+    "require-dev": {
+	 "torounit/composer-wp-dev-kit": "dev-jayanthi/wp-dev-kit-env-setup",
+        "squizlabs/php_codesniffer": "^2.5.1"
+    },
+    "extra": {
+        "wordpress-install-dir": "wp-testproj",
+        "installer-paths": {
+            "wp-content/plugins/{$name}/": [
+                "type:wordpress-plugin"
+            ],
+            "wp-content/themes/{$name}/": [
+                "type:wordpress-theme"
+            ]
+        }
+    },
+    "scripts": {
+        "pre-install-cmd": [
+            "if [ ! -e salt.php ]; then  echo '<?php ' > salt.php && curl https://api.wordpress.org/secret-key/1.1/salt/ >> salt.php; fi",
+            "if [ -e ./bin/pre-install.sh ]; then bash ./bin/pre-install.sh; fi"
+        ],
+        "pre-update-cmd": [
+            "if [ ! -e salt.php ]; then  echo '<?php ' > salt.php && curl https://api.wordpress.org/secret-key/1.1/salt/ >> salt.php; fi",
+            "if [ -e ./bin/pre-install.sh ]; then bash ./bin/pre-install.sh; fi"
+        ],
+        "provision": "bash ./bin/provision.sh",
+        "server": "bash ./bin/server.sh",
+        "create-env": "bash ./bin/create-env.sh"
+    }
+}
