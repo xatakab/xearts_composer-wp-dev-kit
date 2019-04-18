@@ -10,6 +10,7 @@
             "url": "https://github.com/xajayanthi/xearts_composer-wp-dev-kit"
 	}
     ],
+    "minimum-stability": "dev",
     "require": {
         "php": ">=5.4.2",
         "johnpbloch/wordpress": "^4.7",
@@ -21,7 +22,7 @@
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^2.5.1",
-	"xajayanthi/xearts_composer-wp-dev-kit":"dev-master"
+	     "xajayanthi/xearts_composer-wp-dev-kit":"dev-master"
     },
     "extra": {
         "wordpress-install-dir": "wp-testproj",
