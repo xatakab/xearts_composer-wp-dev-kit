@@ -4,11 +4,7 @@
         {
             "type": "composer",
             "url": "https://wpackagist.org"
-        },
-        {  
-            "type": "vcs",
-            "url": "https://github.com/xajayanthi/xearts_composer-wp-dev-kit"
-	}
+        }
     ],
     "minimum-stability": "dev",
     "require": {
@@ -21,8 +17,7 @@
         "wp-cli/wp-cli": "^1.3"
     },
     "require-dev": {
-        "squizlabs/php_codesniffer": "^2.5.1",
-	     "xajayanthi/xearts_composer-wp-dev-kit":"dev-master"
+        "squizlabs/php_codesniffer": "^2.5.1"
     },
     "extra": {
         "wordpress-install-dir": "wp-testproj",
