@@ -1,10 +1,22 @@
 {
-    "name": "xajayanthi/xearts_composer-wp-dev-kit",
+    "name": "xatakab/xearts_composer-wp-dev-kit",
     "repositories": [    
         {
             "type": "composer",
             "url": "https://wpackagist.org"
-        }
+        },
+        "repositories": [ {
+            "type": "package",
+            "package": {
+                "name": "xatakab/xearts_composer-wp-dev-kit",
+                "version": "1.0.0",
+                "source": {
+                    "url": "https://github.com/xatakab/xearts_composer-wp-dev-kit.git",
+                    "type": "git",
+                    "reference": "master"
+                  }
+             }
+        }],
     ],
     "minimum-stability": "dev",
     "require": {
