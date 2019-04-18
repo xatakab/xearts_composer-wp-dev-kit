@@ -5,7 +5,7 @@
             "type": "composer",
             "url": "https://wpackagist.org"
         },
-        "repositories": [ {
+        {
             "type": "package",
             "package": {
                 "name": "xatakab/xearts_composer-wp-dev-kit",
@@ -16,7 +16,7 @@
                     "reference": "master"
                   }
              }
-        }],
+        },
     ],
     "minimum-stability": "dev",
     "require": {
